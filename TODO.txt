@@ -1,0 +1,36 @@
+TODO
+Migrate a project to use it
+Add source control
+Minify and gz to see the size
+Make CSS simpler where possible (especially forms)
+Set up PostCSS build pipeline
+
+DONE
+Split up into files
+Buttons
+Forms
+Implement row vs grid, rework the existing grid
+Use ma2, ma1, ma0, pa2, pa1, pa0 etc
+Better names (following BeerCSS)
+Use h1, h2, h3 for height and w1, w2, w3 for width. Not sure what to use for both (?)
+Simplify summary
+Use CSS variables
+Add dark mode
+Add slight roundness to buttons (and other elements?)
+Create docs for each and every code sample
+Remove anything that can be added with an autoprefixer
+Add text helpers to headings
+Add size helpers from Beer
+Add large/small helpers to headings?
+Make text helpers consistent (thing-text), not text-thing
+Improve hint color? Maybe make it same as muted?
+Maybe bring in the off canvas stuff and the calendar?
+Fix centered empty state
+See if menu border should be removed and figure out how to reuse it for a sidebar
+Forms look good, rework inline and maybe "field" based to use .row instead
+Add a class that fades content in for page transitions
+Only do a demo page, drop the docs page
+Fix toggle switch placement
+Fix loading icon placement in input
+Make the configurable knobs easier and simpler
+Get a high level critique of the framework and see if it is consistent

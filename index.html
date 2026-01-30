@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>spirit.css Demo</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/elements.css">
+  <link rel="stylesheet" href="css/button.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/utils.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dialog.css">
+
+</head>
+
+<body>
+  <main class="container fade-in">
+    <section class="right-align">
+      <button class="small" onclick="document.body.classList.toggle('dark')">Toggle Dark Mode</button>
+    </section>
+    <!-- Section 1: Typography + Elements -->
+    <section id="typography">
+      <div class="h1 middle-align">
+        <div>
+          <h1>Typography & Elements</h1>
+          <p class="muted-text">A showcase of the basic styling and HTML elements.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="m6">
+          <h2>Headings</h2>
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+
+          <h2>Text Elements</h2>
+          <p>This is a standard paragraph with <strong class="bold">bold text</strong>, <em class="italic">italic text</em>, and <u>underlined
+              text</u>.</p>
+          <p>You can also use <mark>highlighted text</mark>, separate content with a horizontal rule,</p>
+          <hr>
+          <p>...and display code snippets like <code data-lang="html">&lt;div&gt;</code> or keystrokes <kbd>Ctrl +
+              C</kbd>.</p>
+          <p><a href="#">This is a standard link</a>.</p>
+        </div>
+
+        <div class="m6">
+          <h2>Blockquote</h2>
+          <blockquote>
+            <p>This is a blockquote. It's often used to highlight important information or quotes from other sources.
+            </p>
+            <cite>- Anonymous</cite>
+          </blockquote>
+
+          <h2>Lists</h2>
+          <div class="grid">
+            <div class="m6">
+              <h3>Unordered</h3>
+              <ul>
+                <li>List item one</li>
+                <li>List item two
+                  <ul>
+                    <li>Nested item A</li>
+                    <li>Nested item B</li>
+                  </ul>
+                </li>
+                <li>List item three</li>
+              </ul>
+            </div>
+            <div class="m6">
+              <h3>Ordered</h3>
+              <ol>
+                <li>First step</li>
+                <li>Second step
+                  <ol>
+                    <li>Sub-step 1</li>
+                    <li>Sub-step 2</li>
+                  </ol>
+                </li>
+                <li>Third step</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="m6">
+          <h3>Inline Code</h3>
+          <p>You can use <code>&lt;code&gt;</code> for inline snippets like <code>npm install</code> or <code>&lt;div&gt;</code> elements.</p>
+          <p>Keyboard inputs can be displayed using <code>&lt;kbd&gt;</code>: <kbd>Ctrl + C</kbd> or <kbd>Esc</kbd></p>
+        </div>
+        <div class="m6">
+          <h3>Code Blocks</h3>
+          <p>Use <code>&lt;pre&gt;</code> and <code>&lt;code&gt;</code> for code blocks. Add <code>data-lang="..."</code> for a language label.</p>
+          <pre data-lang="CSS"><code>.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 .4rem;
+}</code></pre>
+        </div>
+      </div>
+
+      <h2>Tables</h2>
+
+      <h3>Standard Table</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Email</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alice Johnson</td>
+            <td>Administrator</td>
+            <td>alice@example.com</td>
+            <td>Active</td>
+          </tr>
+          <tr>
+            <td>Bob Smith</td>
+            <td>Editor</td>
+            <td>bob@example.com</td>
+            <td>Offline</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Striped & Hoverable Table</h3>
+      <table class="stripe hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Product</th>
+            <th>Category</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>101</td>
+            <td>Wireless Mouse</td>
+            <td>Electronics</td>
+            <td>$29.99</td>
+          </tr>
+          <tr>
+            <td>102</td>
+            <td>Mechanical Keyboard</td>
+            <td>Electronics</td>
+            <td>$129.50</td>
+          </tr>
+          <tr>
+            <td>103</td>
+            <td>Monitor Stand</td>
+            <td>Accessories</td>
+            <td>$45.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section 2: Buttons -->
+    <section id="buttons">
+      <h1>Buttons</h1>
+      <p>Various button styles, sizes, and states.</p>
+
+      <h3>Variations</h3>
+      <button>Default</button>
+      <button class="primary">Primary</button>
+      <button class="success">Success</button>
+      <button class="error">Error</button>
+      <button class="link">Link Button</button>
+
+      <h3>Sizes</h3>
+      <button class="small">Small</button>
+      <button>Default</button>
+      <button class="large">Large</button>
+
+      <h3>States</h3>
+      <button class="primary active">Active</button>
+      <button class="primary" disabled>Disabled</button>
+      <button class="primary loading">Loading</button>
+
+      <div class="grid">
+        <div class="m6">
+          <h3>Button Group</h3>
+          <div class="group">
+            <button>Left</button>
+            <button class="active">Center</button>
+            <button>Right</button>
+          </div>
+        </div>
+        <div class="m6">
+          <h3>Full Width Button</h3>
+          <button class="primary max">Full Width Button</button>
+        </div>
+      </div>
+
+      <h3>Action Buttons</h3>
+      <button class="uniform small circle"><i class="icon"></i>S</button>
+      <button class="uniform circle"><i class="icon"></i>M</button>
+      <button class="uniform large circle"><i class="icon"></i>L</button>
+    </section>
+
+    
+    <section id="dropdowns">
+      <h1>Dropdowns</h1>
+      <p>Dropdowns can be created by placing a <code>&lt;menu&gt;</code> inside a <code>&lt;button&gt;</code>. The menu will appear when the button is focused.</p>
+
+      <div class="row">
+        <button class="primary">
+          <span>Dropdown Menu</span>
+          <menu>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Settings</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Logout</a></li>
+          </menu>
+        </button>
+
+        <button>
+          <span>Options</span>
+          <menu>
+            <li><a href="#">Edit</a></li>
+            <li><a href="#">Copy</a></li>
+            <li><a href="#">Delete</a></li>
+          </menu>
+        </button>
+
+        <button class="success">
+          <span>Align Right</span>
+          <menu class="right">
+            <li><a href="#">Task 1</a></li>
+            <li><a href="#">Task 2</a></li>
+          </menu>
+        </button>
+      </div>
+    </section>
+
+
+    <section id="menus">
+      <h1>Menus</h1>
+      <p>Menus are versatile list containers for navigation, actions, or filters. They can be used standalone or within other components like dropdowns.</p>
+
+      <div class="grid">
+        <div class="m4">
+          <h3>Basic Menu</h3>
+          <menu>
+            <li>
+              <a class="row" href="#">
+                <span class="max">Profile</span>
+                <span class="chip primary round">10</span>
+              </a>
+            </li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Messages</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Logout</a></li>
+          </menu>
+        </div>
+        <div class="m4">
+          <h3>Stateful Menu</h3>
+          <menu>
+            <li><a href="#" class="active">Dashboard</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Tasks</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Help</a></li>
+          </menu>
+        </div>
+        <div class="m4">
+          <h3>Menu with Dividers</h3>
+          <menu>
+            <li><a href="#">Edit</a></li>
+            <li><a href="#">Copy</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Delete</a></li>
+          </menu>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Section 3: Forms -->
+    <section id="forms">
+      <h1>Forms</h1>
+      <p>Form elements including inputs, selects, checkboxes, radios, and switches.</p>
+
+      <h2>Inputs</h2>
+      <div class="grid">
+        <div class="m6">
+          <label>Name</label>
+          <input type="text" placeholder="John Doe">
+
+          <label>Email</label>
+          <input type="email" placeholder="john@example.com">
+        </div>
+        <div class="m6">
+          <label>Password</label>
+          <input type="password" value="123456">
+          <label>Message</label>
+          <textarea placeholder="Type your message here..." rows="3"></textarea>
+        </div>
+      </div>
+
+      <h2>Selects</h2>
+      <div class="grid">
+        <div class="m4">
+          <label>Standard Select</label>
+          <select>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+        </div>
+        <div class="m4">
+          <label>Category</label>
+          <select>
+            <option>Electronics</option>
+            <option>Books</option>
+            <option>Clothing</option>
+          </select>
+        </div>
+      </div>
+
+      <h2>Checkboxes & Radios</h2>
+      <div class="grid">
+        <div class="m4">
+          <h3>Checkbox</h3>
+          <label>
+            <input type="checkbox" checked> Remember me
+          </label>
+          <label>
+            <input type="checkbox"> Subscribe to newsletter
+          </label>
+          <label>
+            <input type="checkbox" disabled> Disabled option
+          </label>
+        </div>
+        <div class="m4">
+          <h3>Radio</h3>
+          <fieldset>
+            <label>
+              <input type="radio" name="gender" checked> Male
+            </label>
+            <label>
+              <input type="radio" name="gender"> Female
+            </label>
+            <label>
+              <input type="radio" name="gender" disabled> Other
+            </label>
+          </fieldset>
+        </div>
+        <div class="m4">
+          <h3>Switch</h3>
+          <fieldset>
+            <label>
+              <input type="checkbox" role="switch" checked> Notifications
+            </label>
+            <label>
+              <input type="checkbox" role="switch"> Dark Mode
+            </label>
+          </fieldset>
+        </div>
+      </div>
+
+      <h2>Sizes</h2>
+      <div class="grid">
+        <div class="m4">
+          <label class="small">Small Input</label>
+          <input type="text" class="small" placeholder="Small">
+          <label class="small">Small Select</label>
+          <select class="small">
+            <option>Option</option>
+          </select>
+        </div>
+        <div class="m4">
+          <label>Default Input</label>
+          <input type="text" placeholder="Default">
+          <label>Default Select</label>
+          <select>
+            <option>Option</option>
+          </select>
+        </div>
+        <div class="m4">
+          <label class="large">Large Input</label>
+          <input type="text" class="large" placeholder="Large">
+          <label class="large">Large Select</label>
+          <select class="large">
+            <option>Option</option>
+          </select>
+        </div>
+      </div>
+
+      <h2>States</h2>
+      <div class="grid">
+        <div class="m4">
+          <div class="valid">
+            <label>Valid Input</label>
+            <input type="text" value="Valid Value" class="valid">
+            <span class="hint">This is a valid entry.</span>
+          </div>
+        </div>
+        <div class="m4">
+          <label>Regular Input</label>
+          <input type="text">
+          <span class="hint">This is a hint.</span>
+          <div class="invalid">
+            <label>Invalid Input</label>
+            <input type="text" value="Invalid Value" class="invalid">
+            <span class="hint">This field is required.</span>
+          </div>
+        </div>
+        <div class="m4">
+          <label>Disabled Input</label>
+          <input type="text" placeholder="Cannot type here" disabled>
+          <label>Readonly Input</label>
+          <input type="text" value="Read only value" readonly>
+        </div>
+      </div>
+
+      <h2>Input Groups</h2>
+      <div class="grid">
+        <div class="m6">
+          <h3>With Buttons</h3>
+          <label>Search</label>
+          <div class="field">
+            <input type="text" placeholder="Search...">
+            <button class="primary" type="button">Go</button>
+          </div>
+          <span class="hint">This is a hint.</span>
+        </div>
+        <div class="m6">
+          <h3>Prefix & Suffix</h3>
+          <fieldset>
+            <label>Website</label>
+            <div class="field prefix">
+              <span>https://</span>
+              <input type="text" placeholder="example.com">
+            </div>
+          </fieldset>
+          <fieldset>
+            <label>Price</label>
+            <div class="field suffix">
+              <input type="text" placeholder="0.00">
+              <span>USD</span>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <h2>Icons</h2>
+      <div class="grid">
+        <div class="m6">
+          <label>Icon Left</label>
+          <div class="field prefix">
+            <i class="loading"></i>
+            <input type="text" placeholder="Search users...">
+          </div>
+        </div>
+        <div class="m6">
+          <label>Icon Right</label>
+          <div class="field suffix">
+            <input type="text" placeholder="Loading...">
+            <i class="loading"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="progress-range">
+      <h1>Progress & Range</h1>
+      <p>Native status and input elements styled to match the component system.</p>
+
+      <div class="grid">
+        <div class="m6">
+          <h3>Progress</h3>
+          <p>The <code>&lt;progress&gt;</code> element for displaying task completion.</p>
+          <progress value="25" max="100"></progress>
+          <span class="muted-text">25% complete</span>
+          <progress value="50" max="100"></progress>
+          <span class="muted-text">50% complete</span>
+          <progress value="75" max="100"></progress>
+          <span class="muted-text">75% complete</span>
+          <progress class="small" value="33" max="100"></progress>
+          <span class="muted-text">Small variation</span>
+        </div>
+        <div class="m6">
+          <h3>Range</h3>
+          <p>The <code>&lt;input type="range"&gt;</code> element for selecting a value from a range.</p>
+          <label>Volume</label>
+          <input type="range" min="0" max="100" value="70">
+          <label>Brightness</label>
+          <input type="range" min="0" max="100" value="40">
+          <label>Contrast</label>
+          <input type="range" min="0" max="100" value="90">
+        </div>
+      </div>
+    </section>
+
+
+    <section id="grid">
+      <h1>Grid</h1>
+      <p>A simple flexbox-based grid system with 12 columns. Responsive modifiers (s, m, l) allow for different layouts across breakpoints.</p>
+      
+      <h3>Auto-width</h3>
+      <div class="grid">
+        <div><div class="overlay pa3 center-align">1</div></div>
+        <div><div class="overlay pa3 center-align">2</div></div>
+        <div><div class="overlay pa3 center-align">3</div></div>
+        <div><div class="overlay pa3 center-align">4</div></div>
+      </div>
+
+      <h3>Responsive Grid</h3>
+      <div class="grid">
+        <div class="s12 m6 l3"><div class="overlay pa3 center-align">.s12 .m6 .l3</div></div>
+        <div class="s12 m6 l3"><div class="secondary pa3 center-align">.s12 .m6 .l3</div></div>
+        <div class="s12 m6 l3"><div class="overlay pa3 center-align">.s12 .m6 .l3</div></div>
+        <div class="s12 m6 l3"><div class="secondary pa3 center-align">.s12 .m6 .l3</div></div>
+      </div>
+
+      <h3>Mixed Widths</h3>
+      <div class="grid">
+        <div class="s8"><div class="overlay pa3 center-align">.s8</div></div>
+        <div class="s4"><div class="secondary pa3 center-align">.s4</div></div>
+      </div>
+
+      <h3>No Space</h3>
+      <div class="grid no-space">
+        <div class="s6 overlay pa3 center-align">No pa3/ma3</div>
+        <div class="s6 secondary pa3 center-align">No pa3/ma3</div>
+      </div>
+    </section>
+
+
+    <section id="avatars">
+      <h1>Avatars</h1>
+      <p>Avatars are unified using the <code>.uniform</code> class, making them perfectly square. Combine with <code>.circle</code> for round avatars.</p>
+
+      <div class="grid">
+        <div class="m6">
+          <h3>Sizes</h3>
+          <div class="row">
+            <span class="uniform tiny primary circle">XS</span>
+            <span class="uniform small primary circle">S</span>
+            <span class="uniform primary circle">M</span>
+            <span class="uniform large primary circle">L</span>
+            <span class="uniform extra primary circle">XL</span>
+          </div>
+        </div>
+        <div class="m6">
+          <h3>Images & Shapes</h3>
+          <div class="row">
+            <figure class="has-badge">
+              <img src="portrait_forest_1767852780064.png" class="uniform" alt="Square">
+              <span class="badge">1</span>
+            </figure>
+            <img src="portrait_forest_1767852780064.png" class="uniform round" alt="Rounded">
+            <img src="portrait_forest_1767852780064.png" class="uniform circle" alt="Circle">
+          </div>
+        </div>
+      </div>
+
+      <h3>Colors</h3>
+      <div class="row">
+        <span class="uniform circle primary">P</span>
+        <span class="uniform circle success">S</span>
+        <span class="uniform circle error">E</span>
+        <span class="uniform circle warning">W</span>
+        <span class="uniform circle overlay">O</span>
+      </div>
+    </section>
+
+
+    <section id="badges">
+      <h1>Badges</h1>
+      <p>Badges are small status indicators. Use the <code>.has-badge</code> class on a container (like a button or figure) to position a child <code>.badge</code> element in the top-right corner.</p>
+
+      <div class="row">
+        <button class="primary has-badge">
+          Button
+          <span class="badge">8</span>
+        </button>
+        <figure class="has-badge">
+          <img src="portrait_forest_1767852780064.png" class="uniform circle" alt="Avatar">
+          <span class="badge">1</span>
+        </figure>
+        <div class="has-badge overlay pa3 round">
+          Container
+          <span class="badge">10</span>
+        </div>
+      </div>
+
+      <h3>Dots</h3>
+      <p>If the badge element is empty, it will show as a small dot.</p>
+      <div class="row">
+        <span class="has-badge">
+          Notification
+          <span class="badge"></span>
+        </span>
+        <button class="has-badge">
+          Update
+          <span class="badge"></span>
+        </button>
+      </div>
+    </section>
+
+
+    <section id="chips">
+      <h1>Chips</h1>
+      <p>Chips are compact elements that represent an input, attribute, or action.</p>
+
+      <div class="row">
+        <span class="chip">Crime</span>
+        <span class="chip">Drama</span>
+        <span class="chip">Biography</span>
+        <span class="chip active">Mystery</span>
+      </div>
+
+      <h3 class="mt3">With Action</h3>
+      <p>Chips can include a clear button for dismissal.</p>
+      <div class="row">
+        <div class="chip">
+          Adventure
+          <a href="#" class="button clear"></a>
+        </div>
+        <div class="chip">
+          Romance
+          <a href="#" class="button clear"></a>
+        </div>
+      </div>
+
+      <h3 class="mt3">With Avatars</h3>
+      <div class="row">
+        <div class="chip">
+          <img src="portrait_forest_1767852780064.png" class="uniform circle tiny">
+          John Doe
+        </div>
+        <div class="chip">
+          <span class="uniform circle primary tiny">AJ</span>
+          Anita Jane
+        </div>
+      </div>
+    <section id="toasts">
+      <h1>Toasts</h1>
+      <p>Toasts are modern notifications built using the <code>.row</code> layout and background utility classes like <code>.primary</code>, <code>.success</code>, and <code>.error</code>.</p>
+
+      <div class="overlay pa3 round mb3">
+        <div class="row no-wrap">
+          <div class="max">
+            This is a neutral toast using <code>.overlay</code>, <code>.pa3</code>, and <code>.round</code>.
+          </div>
+          <button class="clear small"></button>
+        </div>
+      </div>
+
+      <div class="primary pa3 round mb3">
+        <div class="row no-wrap">
+          <div class="max">
+            <strong>Success!</strong> Your profile has been updated.
+          </div>
+          <button class="clear small"></button>
+        </div>
+      </div>
+
+      <div class="overlay pa3 round mb3">
+        <div class="row no-wrap">
+          <div class="max">
+            Something went wrong. Please try again later.
+          </div>
+          <a href="#" class="button link mr1">Retry</a>
+          <button class="clear small"></button>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="tiles">
+      <h1>Tiles</h1>
+      <p>Tiles are flexible layout blocks for list items. They are built using the <code>.row</code> class with <code>.small-space</code> and the <code>.max</code> utility to expand the content area.</p>
+
+      <div class="grid">
+        <div class="m6">
+          <h3>Standard Tile</h3>
+          <div class="row small-space top-align overlay pa3 round no-wrap">
+            <span class="uniform primary circle">JD</span>
+            <div class="max">
+              <div class="bold">John Doe</div>
+              <div class="muted-text small-text">Software Engineer</div>
+              <p class="mb0 mt3 small-text">A brief bio about John Doe. He loves building modular CSS systems.</p>
+            </div>
+            <button class="primary small">Follow</button>
+          </div>
+        </div>
+        <div class="m6">
+          <h3>Centered Tile</h3>
+          <div class="row small-space overlay pa3 round no-wrap">
+             <figure class="has-badge">
+              <img src="portrait_forest_1767852780064.png" class="uniform circle" alt="Avatar">
+              <span class="badge"></span>
+            </figure>
+            <div class="max ellipsis">
+              <div class="bold ellipsis">The Great Gatsby</div>
+              <div class="muted-text small-text ellipsis">F. Scott Fitzgerald - A classic novel about the American Dream</div>
+            </div>
+            <div class="row small-space no-wrap">
+              <button class="clear"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="mt3">Complex Content</h3>
+      <div class="row top-align pa3 no-wrap">
+        <div class="overlay uniform round large">
+          ?
+        </div>
+        <div class="max">
+          <div class="bold">Project_Final_v2_final.pdf</div>
+          <div class="muted-text small-text">Updated 2 hours ago by Alice</div>
+          <div class="mt3 small-text">
+            <span class="chip">PDF</span>
+            <span class="chip">Shared</span>
+          </div>
+        </div>
+        <div class="row small-space">
+          <button class="small">Download</button>
+          <button class="clear"></button>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="popovers">
+      <h1>Popovers</h1>
+      <p>Popovers provide rich contextual information. Add the <code>.has-popover</code> class to any container to turn it into a trigger for a child <code>.popover</code>.</p>
+
+      <div class="row">
+        <button class="primary has-popover">
+          <span>Top Popover</span>
+          <div class="popover">
+            <div class="pa3">
+              <h4 class="mt0">Rich Popover</h4>
+              <p class="mb0 small-text">This popover is a direct child of the button. It supports rich content like headings and paragraphs.</p>
+            </div>
+          </div>
+        </button>
+
+        <button class="has-popover">
+          <span>Show Right</span>
+          <div class="popover right">
+            <div class="pa3">
+              <p class="ma0">Popover appearing on the right side.</p>
+            </div>
+          </div>
+        </button>
+
+        <button class="success has-popover">
+          <span>Show Bottom</span>
+          <div class="popover bottom">
+            <div class="pa3">
+              <p class="ma0">Popover appearing at the bottom.</p>
+            </div>
+          </div>
+        </button>
+
+        <button class="error has-popover">
+          <span>Show Left</span>
+          <div class="popover left">
+            <div class="pa3">
+              <p class="ma0">Popover appearing on the left side.</p>
+            </div>
+          </div>
+        </button>
+      </div>
+
+      <h3 class="mt3">Universal Triggering</h3>
+      <p>Popovers can be placed inside any element with the <code>.has-popover</code> class. Hover or focus the text below:</p>
+      
+      <p>
+        You can even embed popovers in <span class="primary-text pointer has-popover" tabindex="0">
+          inline text
+          <div class="popover">
+            <div class="pa3">
+              <p class="ma0">Surprise! I'm an inline popover.</p>
+            </div>
+          </div>
+        </span> to provide definitions or extra context.
+      </p>
+    </section>
+
+
+    <section id="dialogs">
+      <h1>Dialogs & Modals</h1>
+      <p>Zero-JS modals and sidebars that work in every browser. This pattern uses a hidden checkbox and a backdrop label to handle opening and closing.</p>
+
+      <div class="row">
+        <!-- Standard Dialog -->
+        <div>
+          <label for="modal-standard" class="button primary">Open Standard Dialog</label>
+          <input type="checkbox" id="modal-standard" class="dialog-state">
+          <label for="modal-standard" class="dialog-backdrop"></label>
+          <dialog>
+            <h3 class="mt0">Dialog Title</h3>
+            <p>No JS, no Popover API required. Works via the checkbox hack with adjacent selectors for reliability.</p>
+            <div class="row mt3">
+              <label for="modal-standard" class="button link">Cancel</label>
+              <label for="modal-standard" class="button primary">Confirm</label>
+            </div>
+          </dialog>
+        </div>
+
+        <!-- Sidebar (Left) -->
+        <div>
+          <label for="modal-left" class="button">Left Sidebar</label>
+          <input type="checkbox" id="modal-left" class="dialog-state">
+          <label for="modal-left" class="dialog-backdrop"></label>
+          <dialog class="left medium">
+            <div class="row no-wrap mb3">
+              <h3 class="max ma0">Menu</h3>
+              <label for="modal-left" class="button link small">&times;</label>
+            </div>
+            <menu>
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">Messages</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Logout</a></li>
+            </menu>
+          </dialog>
+        </div>
+
+        <!-- Bottom Sheet -->
+        <div>
+          <label for="modal-bottom" class="button">Bottom Sheet</label>
+          <input type="checkbox" id="modal-bottom" class="dialog-state">
+          <label for="modal-bottom" class="dialog-backdrop"></label>
+          <dialog class="bottom">
+            <div class="container pb1 pt0">
+              <!-- Drag Handle -->
+              <div class="center-align mt0 mb2">
+                <div class="overlay round" style="width: 32px; height: 4px; display: inline-block; opacity: 0.3;"></div>
+              </div>
+              
+              <h4 class="center-align mb3 mt0">Quick Actions</h4>
+              
+              <div>
+                <label for="modal-bottom" class="row pa2 middle-align pointer round mb1">
+                  <span class="uniform circle primary mr3">S</span>
+                  <span class="max bold">Share with friends</span>
+                </label>
+              </div>
+
+              <div>
+                <label for="modal-bottom" class="row pa2 middle-align pointer round mb1">
+                  <span class="uniform circle success mr3">D</span>
+                  <span class="max bold">Download locally</span>
+                </label>
+              </div>
+
+              <div>
+                <label for="modal-bottom" class="row pa2 middle-align pointer round mb1">
+                  <span class="uniform circle warning mr3">P</span>
+                  <span class="max bold">Pin to dashboard</span>
+                </label>
+              </div>
+
+              <div>
+                <label for="modal-bottom" class="row pa2 middle-align pointer round mb1 error-text">
+                  <span class="uniform circle error mr3">E</span>
+                  <span class="max bold">Delete permanently</span>
+                </label>
+              </div>
+
+              <div class="mt3 center-align">
+                <label for="modal-bottom" class="button link max large">Dismiss</label>
+              </div>
+            </div>
+          </dialog>
+        </div>
+      </div>
+
+      <h3 class="mt3">Why this pattern?</h3>
+      <p>By using a <code>&lt;label&gt;</code> as the backdrop, clicking anywhere outside the dialog automatically unchecks the hidden input and closes the modal—all without a single line of JavaScript or modern API dependencies.</p>
+    </section>
+
+
+    <section id="tooltips">
+      <h1>Tooltips</h1>
+      <p>Tooltips are pure CSS indicators that appear on or focus. Add the <code>.tooltip</code> class and a <code>data-tooltip</code> attribute.</p>
+
+      <div class="row">
+        <button class="tooltip" data-tooltip="I am a tooltip!">Hover Me</button>
+        <button class="tooltip right" data-tooltip="I am on the right!">Right</button>
+        <button class="tooltip bottom" data-tooltip="I am on the bottom!">Bottom</button>
+        <button class="tooltip left" data-tooltip="I am on the left!">Left</button>
+      </div>
+
+      <h3 class="mt3">On Text</h3>
+      <p>
+        You can put tooltips on <span class="tooltip primary-text" data-tooltip="Helpful info">inline text</span> just as easily.
+      </p>
+    </section>
+
+
+    <section id="accordions">
+      <h1>Accordions</h1>
+      <p>Accordions can be built using either the semantic <code>&lt;details&gt;</code> element or the classic checkbox pattern for older browser support or specific state management.</p>
+      
+      <div class="grid">
+        <div class="m6">
+          <h3>Semantic Accordion</h3>
+          <p class="small-text">Using the <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> tags. Styling is applied automatically.</p>
+          <details open>
+            <summary>
+              <i class="icon"></i> Open Item
+            </summary>
+            <div class="pa3">
+              This item is open by default using the <code>open</code> attribute.
+            </div>
+          </details>
+          <details>
+            <summary>
+              <i class="icon"></i> Closed Item
+            </summary>
+            <div class="pa3">
+              This item was closed. The icon rotates automatically.
+            </div>
+          </details>
+        </div>
+        <div class="m6">
+          <h3>Checkbox Accordion</h3>
+          <p class="small-text">Using <code>.accordion</code> with a hidden input and label. Useful for complex state persistence.</p>
+          <div class="card pa0">
+            <div class="accordion">
+              <input type="checkbox" class="none" id="acc-1" hidden checked>
+              <label for="acc-1">
+                <i class="icon"></i> <strong class="bold">Settings</strong>
+              </label>
+              <div class="pa3" style="border-top: .05rem solid var(--color-primary-light)">
+                <label class="checkbox">
+                  <input type="checkbox" checked> Notifications
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox"> Updates
+                </label>
+              </div>
+            </div>
+            
+            <div class="divider ma0"></div>
+            
+            <div class="accordion">
+              <input type="checkbox" class="none" id="acc-2" hidden>
+              <label for="acc-2">
+                <i class="icon"></i> <strong class="bold">Privacy</strong>
+              </label>
+              <div class="pa3" style="border-top: .05rem solid var(--color-primary-light)">
+                <p class="ma0">Privacy settings content...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="cards">
+      <h1>Cards</h1>
+      <p>Cards have a default pa3 of <code>.8rem</code>. When you need flush content (like an image), add the <code>.pa0</code> utility to the card and wrap text content in a <code>.pa3</code> div.</p>
+
+      <div class="grid">
+        <div class="m4">
+          <h3>Padded Card</h3>
+          <div class="card">
+            <h4>Card Title</h4>
+            <div class="max">
+              <p>This is a standard card. All children are automatically padded by the card container.</p>
+            </div>
+            <div class="row small-space">
+              <button class="primary small">Action</button>
+              <button class="link small">Cancel</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="m4">
+          <h3>Panel Layout</h3>
+          <div class="card pa0 h2">
+            <div class="pa3 bold">
+              Panel Header
+            </div>
+            <div class="pa3 max scroll">
+              <p>Panels are cards with a fixed height and scrolling content. They often have a header and footer.</p>
+              <p>Using <code>.pa0</code> on the card and <code>.max</code> + <code>.scroll</code> on the body element replicates the bold panel component.</p>
+              <p>This body has vertical pa3 from the <code>.pa3</code> class, but you can use <code>.ph3</code> if you want it flush vertically with dividers.</p>
+              <p>More content to demonstrate scrolling...</p>
+              <p>More content to demonstrate scrolling...</p>
+              <p>More content to demonstrate scrolling...</p>
+              <p>More content to demonstrate scrolling...</p>
+              <p>More content to demonstrate scrolling...</p>
+            </div>
+            <div class="pa3">
+              <button class="primary small">Save</button>
+              <button class="link small">Cancel</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="m4">
+          <h3>Card with Image</h3>
+          <div class="card pa0">
+            <img src="landscape_mountain_1767852763706.png" alt="Mountain">
+            <div class="ph3 pt3">
+              <h4>Mountain View</h4>
+              <p>This card uses <code>.pa0</code> to make the image flush. This text is wrapped in a <code>.pa3</code> div.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="m4">
+          <h3>Full Height</h3>
+          <div class="card full-height">
+            <div class="max">
+              <p>Using <code>.full-height</code> makes the card fill its container. Since grid columns are now flex containers, cards grow automatically to match heights.</p>
+            </div>
+            <div class="secondary pa3 small-text">
+              Flush-looking secondary background at the bottom.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="mt3">Layout Patterns</h3>
+      <div class="grid">
+        <div class="m6">
+          <div class="card pa0">
+            <div class="row no-space max">
+              <div class="s4 overlay center-align middle-align" style="padding: .8rem">
+                <strong class="bold">Side</strong>
+              </div>
+              <div class="s8 pa3">
+                <p class="ma0">Using <code>.pa0</code> on the card and standard <code>.pa3</code> on inner components for split layouts.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="m6">
+          <div class="card">
+            <p class="ma0">Top section</p>
+            <div class="divider"></div>
+            <p class="ma0">Bottom section</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="empty-state">
+      <h1>Empty States</h1>
+      <p>Empty states are built using utility classes like <code>.overlay</code>, <code>.round</code>, <code>.center-align</code> and <code>.pv3</code>. For more height, you can use the <code>.h1</code> and <code>.middle-align</code> layout classes.</p>
+
+      <div class="overlay round center-align pv5">
+        <span class="uniform large primary circle mb3">?</span>
+        <h4>No results found</h4>
+        <p class="muted-text">Try adjusting your search or filters to find what you're looking for.</p>
+        <button class="primary">Clear Filters</button>
+      </div>
+
+      <h3 class="mt3">With Fixed Height</h3>
+      <div class="overlay round center-align h2 middle-align">
+        <div class="full-width">
+          <h4>You have no messages</h4>
+          <p class="muted-text">Start a conversation to see it here.</p>
+          <div class="row center-align">
+            <div class="field w2">
+              <input type="text" placeholder="Search...">
+              <button class="primary">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="navigation">
+      <h1>Navigation</h1>
+      <p>Using the <code>.row</code> and <code>.max</code> utility classes from <code>layout.css</code> to build flexible navigation bars.</p>
+
+      <h3>Standard (Brand, then items)</h3>
+      <nav class="row">
+        <span><strong>Brand</strong></span>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </nav>
+
+      <h3>Breadcrumbs (.row + manual slashes)</h3>
+      <nav class="row small-space mv1 muted-text">
+        <a href="#" class="muted-text">Home</a>
+        <span>/</span>
+        <a href="#" class="muted-text">Category</a>
+        <span>/</span>
+        <a href="#" class="base-text">Settings</a>
+      </nav>
+
+      <h3>Brand, items, right items</h3>
+      <nav class="row">
+        <div><strong>Brand</strong></div>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <div class="max"></div>
+        <a href="#">Account</a>
+        <button class="primary">Logout</button>
+      </nav>
+
+      <h3>Brand, center, more items</h3>
+      <nav class="row">
+        <div><strong>Brand</strong></div>
+        <div class="row max center-align">
+          <a class="button link" href="#">Home</a>
+          <a class="button link" href="#">Products</a>
+          <a class="button link" href="#">Support</a>
+        </div>
+        <div class="row">
+          <a class="button link" href="#">Login</a>
+          <button class="primary">Join</button>
+        </div>
+      </nav>
+    </section>
+
+
+    <!-- Section 5: Media -->
+    <section id="media">
+      <h1>Media</h1>
+      <p>Examples of responsive images, videos, figures, and aspect-ratio containers.</p>
+
+      <h2>Images</h2>
+      <div class="grid">
+        <div class="m6">
+          <h3>Responsive Image</h3>
+          <p>Images with the <code>.responsive</code> class will scale to fit their container.</p>
+          <img src="landscape_mountain_1767852763706.png" alt="Landscape">
+        </div>
+        <div class="m6">
+          <h3>Figure with Figcaption</h3>
+          <figure>
+            <img src="portrait_forest_1767852780064.png" alt="Forest">
+            <figcaption>A misty redwood forest with sunlight streaming through the trees.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <h2>Object Fit</h2>
+      <p>Use <code>.fit-cover</code> and <code>.fit-contain</code> to control how images fill fixed-size containers.</p>
+      <div class="grid">
+        <div class="m6">
+          <h3>Cover (.fit-cover)</h3>
+          <div style="height: 200px; overflow: hidden; background: #eee;">
+            <img src="landscape_mountain_1767852763706.png" class="fit-cover" style="height: 100%;" alt="Cover">
+          </div>
+        </div>
+        <div class="m6">
+          <h3>Contain (.fit-contain)</h3>
+          <div style="height: 200px; overflow: hidden; background: #eee;">
+            <img src="landscape_mountain_1767852763706.png" class="fit-contain" style="height: 100%;" alt="Contain">
+          </div>
+        </div>
+      </div>
+
+      <h2>Responsive Containers</h2>
+      <p>Use <code>.responsive</code> on a container to create a 16:9 aspect ratio box for iframes or embeds.</p>
+      <div class="grid">
+        <div class="m8">
+          <div class="responsive">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="m4">
+          <p>This container maintains a 16:9 aspect ratio regardless of its width, which is perfect for video embeds.</p>
+        </div>
+      </div>
+
+      <h2>Video</h2>
+      <p>Basic styling for the <code>&lt;video&gt;</code> element.</p>
+      <video controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+
+    <section id="pagination">
+      <h1>Pagination</h1>
+      <p>Pagination is built using the <code>.row</code> layout class and <code>.button</code> elements. Use <code>.uniform</code> for perfectly square page numbers.</p>
+
+      <h3>Standard Pagination</h3>
+      <div class="row small-space">
+        <a class="button link small disabled" tabindex="-1">Previous</a>
+        <a class="button small uniform primary">1</a>
+        <a class="button small uniform link">2</a>
+        <a class="button small uniform link">3</a>
+        <span class="small-text ph3 muted-text">...</span>
+        <a class="button small uniform link">12</a>
+        <a class="button link small">Next</a>
+      </div>
+
+      <h3 class="mt3">Contextual Pagination</h3>
+      <p>Flexible navigation for moving between major sections or pages.</p>
+      <nav class="row no-space">
+        <a href="#" class="pv3 left-align">
+          <div class="muted-text">Previous</div>
+          <div class="f5">Getting started</div>
+        </a>
+        <div class="max"></div>
+        <a href="#" class="pv3 right-align">
+          <div class="muted-text">Next</div>
+          <div class="f5">Layout</div>
+        </a>
+      </nav>
+    </section>
+
+
+    <section id="steps">
+      <h1>Steps</h1>
+      <p>Steps are used to display progress through a multi-step process. They automatically style <code>&lt;li&gt;</code> children, so no extra classes are needed on individual items.</p>
+
+      <ul class="step">
+        <li class="active">Step 1</li>
+        <li>Step 2</li>
+        <li>Step 3</li>
+      </ul>
+
+      <h3 class="mt3">With Links</h3>
+      <ul class="step">
+        <li>
+          <a href="#">Step 1</a>
+        </li>
+        <li>
+          <a href="#">Step 2</a>
+        </li>
+        <li class="active">
+          <a href="#">Step 3</a>
+        </li>
+        <li>
+          <a href="#">Step 4</a>
+        </li>
+      </ul>
+    </section>
+
+
+    <section id="tabs">
+      <h1>Tabs</h1>
+      <p>Tabs are used for switching between different views or sections. Like steps, they automatically style their direct children.</p>
+
+      <ul class="tab">
+        <li class="active"><a href="#">Music</a></li>
+        <li><a href="#">Playlists</a></li>
+        <li><a href="#">Radio</a></li>
+        <li class="action">
+          <div class="field ma0">
+            <input type="text" class="small" placeholder="Search...">
+            <button class="primary small">Go</button>
+          </div>
+        </li>
+      </ul>
+
+      <h3 class="mt3">Full Width Tabs</h3>
+      <p>Add the <code>.full-width</code> utility class to make tabs fill the container and have equal-sized items.</p>
+      <ul class="tab max">
+        <li class="active"><a href="#">Music</a></li>
+        <li><a href="#">Playlists</a></li>
+        <li><a href="#">Radio</a></li>
+      </ul>
+
+      <h3 class="mt3">With Badges</h3>
+      <p>Tabs support badges inside the link elements using the standard <code>.has-badge</code> pattern.</p>
+      <ul class="tab">
+        <li class="active">
+          <a href="#" class="has-badge">
+            Notifications
+            <span class="badge">2</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">Messages</a>
+        </li>
+      </ul>
+    </section>
+
+    
+    <section id="calendar">
+      <h1>Calendar</h1>
+      <p>A simple calendar example built using the existing <code>table</code>, <code>button</code>, and utility classes.</p>
+
+      <div class="overlay pa3 round w2">
+        <div class="row middle-align mb2 no-wrap">
+          <button class="uniform small circle overlay ma0">
+            &lt;
+          </button>
+          <div class="max center-align bold small-text uppercase">January 2026</div>
+          <button class="uniform small circle overlay ma0">
+            &gt;
+          </button>
+        </div>
+        <table class="center-align ma0">
+          <thead>
+            <tr>
+              <th class="pa1 small-text muted-text center-align">S</th>
+              <th class="pa1 small-text muted-text center-align">M</th>
+              <th class="pa1 small-text muted-text center-align">T</th>
+              <th class="pa1 small-text muted-text center-align">W</th>
+              <th class="pa1 small-text muted-text center-align">T</th>
+              <th class="pa1 small-text muted-text center-align">F</th>
+              <th class="pa1 small-text muted-text center-align">S</th>
+            </tr>
+          </thead>
+          <tbody class="small-text">
+            <tr>
+              <td class="pa1 muted-text">28</td>
+              <td class="pa1 muted-text">29</td>
+              <td class="pa1 muted-text">30</td>
+              <td class="pa1 muted-text">31</td>
+              <td class="pa1 pointer">1</td>
+              <td class="pa1 pointer">2</td>
+              <td class="pa1 pointer">3</td>
+            </tr>
+            <tr>
+              <td class="pa1 pointer">4</td>
+              <td class="pa1 pointer">5</td>
+              <td class="pa1 pointer">6</td>
+              <td class="pa1 pointer">7</td>
+              <td class="pa1 pointer">8</td>
+              <td class="pa1 pointer">9</td>
+              <td class="pa1 pointer">10</td>
+            </tr>
+            <tr>
+              <td class="pa1 pointer">11</td>
+              <td class="pa1 pointer">12</td>
+              <td class="pa1 pointer">13</td>
+              <td class="pa1 pointer has-badge tooltip" data-tooltip="Tooltip">
+                <span class="has-badge">
+                  14
+                  <span class="badge"></span>
+                </span>
+              </td>
+              <td class="pa1 primary">15</td>
+              <td class="pa1 pointer secondary">16</td>
+              <td class="pa1 pointer secondary">17</td>
+            </tr>
+            <tr>
+              <td class="pa1 pointer primary">18</td>
+              <td class="pa1 pointer">19</td>
+              <td class="pa1 pointer">20</td>
+              <td class="pa1 pointer">21</td>
+              <td class="pa1 pointer">22</td>
+              <td class="pa1 pointer">23</td>
+              <td class="pa1 pointer">24</td>
+            </tr>
+            <tr>
+              <td class="pa1 pointer">25</td>
+              <td class="pa1 pointer">26</td>
+              <td class="pa1 pointer">27</td>
+              <td class="pa1 pointer">28</td>
+              <td class="pa1 pointer">29</td>
+              <td class="pa1 pointer">30</td>
+              <td class="pa1 pointer">31</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+
+    <section id="utilities">
+      <h1>Utilities</h1>
+      <p>Helper classes for common styling tasks like colors, spacing, and alignment.</p>
+
+      <h2>Colors</h2>
+      <p>Background helper classes can be applied to any element.</p>
+      <div class="grid">
+        <div class="s4 m3 l2">
+          <div class="primary pa3 round center-align">.primary</div>
+        </div>
+        <div class="s4 m3 l2">
+          <div class="secondary pa3 round center-align">.secondary</div>
+        </div>
+        <div class="s4 m3 l2">
+          <div class="overlay pa3 round center-align">.overlay</div>
+        </div>
+        <div class="s4 m3 l2">
+          <div class="surface pa3 round center-align">.surface</div>
+        </div>
+        <div class="s4 m3 l2">
+          <div class="success pa3 round center-align">.success</div>
+        </div>
+        <div class="s4 m3 l2">
+          <div class="warning pa3 round center-align">.warning</div>
+        </div>
+        <div class="s4 m3 l2">
+          <div class="error pa3 round center-align">.error</div>
+        </div>
+      </div>
+
+      <h2 class="mt3">Text Colors</h2>
+      <p>
+        <span class="primary-text">.primary-text</span> |
+        <span class="success-text">.success-text</span> |
+        <span class="error-text">.error-text</span> |
+        <span class="warning-text">.warning-text</span> |
+        <span class="muted-text">.muted-text</span> |
+        <span class="base-text">.base-text</span>
+      </p>
+
+      <h2 class="mt3">Text Transforms</h2>
+      <p>
+        <span class="uppercase">.uppercase</span> |
+        <span class="lowercase">LOWERCASE</span> |
+        <span class="capitalize">capitalized text</span> |
+        <span class="bold">.bold</span> |
+        <span class="italic">.italic</span> |
+        <span class="normal bold">back to .normal</span>
+      </p>
+
+      <h2 class="mt3">Text Sizes</h2>
+      <p class="large-text">Large text using <code>.large-text</code></p>
+      <p class="small-text">Small text using <code>.small-text</code></p>
+
+      <h2 class="mt3">Width & Height</h2>
+      <div class="grid">
+        <div class="m4">
+          <div class="w1 overlay pa3 mb1 round">.w1 (10rem)</div>
+          <div class="w2 overlay pa3 mb1 round">.w2 (20rem)</div>
+          <div class="full-width secondary pa3 round">.full-width</div>
+        </div>
+        <div class="m4">
+          <div class="h1 overlay pa3 round middle-align center-align">.h1 (10rem)</div>
+        </div>
+      </div>
+
+      <h2 class="mt3">Position</h2>
+      <p>Position utilities: <code>.relative</code>, <code>.absolute</code>, <code>.fixed</code>, <code>.sticky</code></p>
+      <div class="relative overlay pa3 round" style="height: 5rem">
+        <div class="absolute primary pa2 round" style="top: .5rem; right: .5rem">.absolute</div>
+        This box is <code>.relative</code>
+      </div>
+
+      <h2 class="mt3">Dividers</h2>
+      <div class="grid">
+        <div class="m6">
+          <h3>Horizontal</h3>
+          <p>Content above</p>
+          <div class="divider"></div>
+          <p>Content below</p>
+          <div class="divider" data-content="OR"></div>
+          <p>Divider with text</p>
+        </div>
+        <div class="m6">
+          <h3>Vertical</h3>
+          <div class="row" style="height: 4rem">
+            <span>Left</span>
+            <div class="divider vertical"></div>
+            <span>Right</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="mt3">Loading</h2>
+      <div class="row">
+        <div class="loading">Loading...</div>
+        <div class="loading large">Large loading...</div>
+      </div>
+    </section>
+
+
+    <section id="additional-elements">
+      <h1>Additional Elements</h1>
+
+      <h2>Definition Lists</h2>
+      <dl>
+        <dt>Term 1</dt>
+        <dd>Definition for term 1. Description lists are useful for glossaries and metadata.</dd>
+        <dt>Term 2</dt>
+        <dd>Definition for term 2. They display key-value pairs elegantly.</dd>
+      </dl>
+
+      <h2 class="mt3">Abbreviations</h2>
+      <p>You can use <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> to build web pages.</p>
+
+      <h2 class="mt3">Multi-Select & File Input</h2>
+      <div class="grid">
+        <div class="m6">
+          <label>Multi-Select</label>
+          <select multiple size="4">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+            <option>Option 4</option>
+          </select>
+        </div>
+        <div class="m6">
+          <label>File Input</label>
+          <input type="file">
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+button, .button {
+  appearance: none;
+  background: transparent;
+  border: .05rem solid var(--color-primary);
+  border-radius: var(--roundness);
+  color: var(--color-primary);
+  display: inline-block;
+  font-size: .8rem;
+  height: 1.8rem;
+  line-height: 1.2rem;
+  outline: none;
+  padding: .25rem .4rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background .2s, border .2s, box-shadow .2s, color .2s;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+button:focus, .button:focus {
+  box-shadow: 0 0 0 .1rem rgba(87, 85, 217, .2);
+}
+
+button:focus,
+button:hover,
+.button:focus,
+.button:hover {
+  background: var(--color-base-300) !important;
+  border-color: var(--color-primary-dark) !important;
+  text-decoration: none;
+}
+
+button:active,
+button.active,
+.button:active,
+.button.active {
+  background: var(--color-primary-dark) !important;
+  border-color: var(--color-primary-dark) !important;
+  color: var(--color-primary-content);
+  text-decoration: none;
+}
+
+button:active.loading::after,
+button.active.loading::after,
+.button:active.loading::after,
+.button.active.loading::after {
+  border-bottom-color: #fff;
+  border-left-color: #fff;
+}
+
+button[disabled],
+button:disabled,
+button.disabled,
+.button[disabled],
+.button:disabled,
+.button.disabled {
+  cursor: default;
+  opacity: .5;
+  pointer-events: none;
+}
+
+button.primary,
+.button.primary {
+  background: var(--color-primary);
+  border-color: var(--color-primary-dark);
+  color: var(--color-primary-content);
+}
+
+button.primary:focus,
+button.primary:hover,
+button.primary:active,
+button.primary.active,
+.button.primary:focus,
+.button.primary:hover,
+.button.primary:active,
+.button.primary.active {
+  background: var(--color-primary-dark) !important;
+  border-color: var(--color-primary-dark) !important;
+  color: var(--color-primary-content);
+}
+
+button.primary.loading::after,
+.button.primary.loading::after {
+  border-bottom-color: #fff;
+  border-left-color: #fff;
+}
+
+button.success,
+.button.success {
+  background: var(--color-success);
+  border-color: var(--color-success-dark);
+  color: var(--color-success-content);
+}
+
+button.success:focus,
+.button.success:focus {
+  box-shadow: 0 0 0 .1rem rgba(50, 182, 67, .2);
+}
+
+button.success:focus,
+button.success:hover,
+button.success:active,
+button.success.active,
+.button.success:focus,
+.button.success:hover,
+.button.success:active,
+.button.success.active {
+  background: var(--color-success-dark) !important;
+  border-color: var(--color-success-dark) !important;
+  color: var(--color-success-content);
+}
+
+button.success.loading::after,
+.button.success.loading::after {
+  border-bottom-color: #fff;
+  border-left-color: #fff;
+}
+
+button.error,
+.button.error {
+  background: var(--color-error);
+  border-color: var(--color-error-dark);
+  color: var(--color-error-content);
+}
+
+button.error:focus,
+.button.error:focus {
+  box-shadow: 0 0 0 .1rem rgba(232, 86, 0, .2);
+}
+
+button.error:focus,
+button.error:hover,
+button.error:active,
+button.error.active,
+.button.error:focus,
+.button.error:hover,
+.button.error:active,
+.button.error.active {
+  background: var(--color-error-dark) !important;
+  border-color: var(--color-error-dark) !important;
+  color: var(--color-error-content);
+}
+
+button.error.loading::after,
+.button.error.loading::after {
+  border-bottom-color: #fff;
+  border-left-color: #fff;
+}
+
+button.link,
+.button.link {
+  background: transparent;
+  border-color: transparent;
+  color: var(--color-primary);
+}
+
+button.link:focus,
+button.link:hover,
+button.link:active,
+button.link.active,
+.button.link:focus,
+.button.link:hover,
+.button.link:active,
+.button.link.active {
+  background: transparent !important;
+  border-color: transparent !important;
+  color: var(--color-primary-dark);
+}
+
+button.small,
+.button.small {
+  font-size: .7rem;
+  height: 1.4rem;
+  padding: .05rem .3rem;
+}
+
+button.large,
+.button.large {
+  font-size: .9rem;
+  height: 2rem;
+  padding: .35rem .6rem;
+}
+
+button.max,
+.button.max {
+  display: block;
+  width: 100%;
+}
+
+button.clear,
+.button.clear {
+  background: transparent;
+  border: 0;
+  color: currentColor;
+  height: 1rem;
+  line-height: .8rem;
+  margin-left: .2rem;
+  margin-right: -2px;
+  opacity: 1;
+  padding: .1rem;
+  text-decoration: none;
+  width: 1rem;
+}
+
+button.clear:focus,
+button.clear:hover,
+button.clear:active,
+button.clear.active,
+.button.clear:focus,
+.button.clear:hover,
+.button.clear:active,
+.button.clear.active {
+  background: rgba(247, 248, 249, .5) !important;
+  opacity: .95;
+}
+
+button.clear::before,
+.button.clear::before {
+  content: "\2715";
+}
+
+.group {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.group button,
+.group .button {
+  flex: 0 1 auto;
+}
+
+.group button:first-child:not(:last-child),
+.group .button:first-child:not(:last-child) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.group button:not(:first-child):not(:last-child),
+.group .button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+  margin-left: -.05rem;
+}
+
+.group button:last-child:not(:first-child),
+.group .button:last-child:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  margin-left: -.05rem;
+}
+
+.group button:focus,
+.group button:hover,
+.group button:active,
+.group button.active,
+.group .button:focus,
+.group .button:hover,
+.group .button:active,
+.group .button.active {
+  z-index: 1;
+}
+
+.group.max {
+  display: flex;
+}
+
+.group.max button,
+.group.max .button {
+  flex: 1 0 0;
+}

@@ -1,0 +1,18 @@
+# Generated files
+# spirit.css (Tracked for CDN)
+# spirit.min.css (Tracked for CDN)
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# Gemini artifacts
+.gemini/
+
+# Large generated images
+*.png

@@ -1,0 +1,178 @@
+/* Dialogs/Modals */
+.dialog-overlay,
+dialog {
+    --_padding: 1.5rem;
+    --_top: var(--_padding);
+    --_bottom: var(--_padding);
+    display: block;
+    visibility: hidden;
+    border: none;
+    opacity: 0;
+    position: fixed;
+    box-shadow: 0 0.4rem 1.2rem rgba(48, 55, 66, 0.3);
+    color: var(--color-base-content);
+    background-color: var(--color-base-200);
+    padding: var(--_padding);
+    z-index: 1000;
+    inset: 10% 0 auto 0;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 20rem;
+    max-width: 90%;
+    max-height: 80%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition:
+        opacity 0.2s,
+        transform 0.2s,
+        visibility 0.2s;
+    border-radius: 0.5rem;
+    transform: translateY(-2rem);
+    outline: none;
+}
+
+/* Standard backdrop (Native) */
+dialog::backdrop,
+[popover]::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+/* Checkbox Hack / Manual backdrop */
+input.dialog-state {
+    display: none !important;
+}
+
+.dialog-backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    inset: 0;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 999;
+    transition:
+        opacity 0.2s,
+        visibility 0.2s;
+}
+
+/* Visibility Triggers */
+.dialog-state:checked + .dialog-backdrop,
+.dialog-state:checked + .dialog-backdrop + dialog,
+dialog:is(.active, [open], :popover-open) {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+dialog:is(.active, [open], :popover-open)::backdrop,
+[popover]:popover-open::backdrop {
+    opacity: 1;
+}
+
+/* Variations */
+dialog.small {
+    width: 25%;
+}
+dialog.medium {
+    width: 50%;
+}
+dialog.large {
+    width: 75%;
+}
+
+dialog:is(.top, .right, .bottom, .left, .max) {
+    --_padding: 1rem;
+}
+
+dialog:is(.top, .bottom) {
+    height: auto;
+    width: 100%;
+    min-width: auto;
+    max-height: 100%;
+}
+
+dialog.top {
+    inset: 0 0 auto 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0 0 0.5rem 0.5rem;
+    transform: translateY(-100%);
+}
+
+dialog.bottom {
+    inset: auto 0 0 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.5rem 0.5rem 0 0;
+    transform: translateY(100%);
+}
+
+dialog:is(.left, .right) {
+    inset: 0 auto auto 0;
+    width: auto;
+    height: 100%;
+    max-height: 100%;
+}
+
+[dir="rtl"] dialog.right,
+dialog.left {
+    inset: 0 auto auto 0;
+    border-radius: 0 0.5rem 0.5rem 0;
+    transform: translateX(-100%);
+}
+
+[dir="rtl"] dialog.left,
+dialog.right {
+    inset: 0 0 auto auto;
+    border-radius: 0.5rem 0 0 0.5rem;
+    transform: translateX(100%);
+}
+
+dialog.max {
+    inset: 0 auto auto 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0;
+    transform: translateY(2rem);
+}
+
+/* Adjusted Transform for Positioning (Active) */
+.dialog-state:checked
+    + .dialog-backdrop
+    + dialog:is(.left, .right, .top, .bottom, .max),
+dialog:is(.active, [open], :popover-open):is(
+        .left,
+        .right,
+        .top,
+        .bottom,
+        .max
+    ) {
+    transform: translate(0, 0);
+}
+
+/* Responsive sidebars */
+@media (min-width: 601px) {
+    dialog.small:is(.left, .right) {
+        width: 15rem;
+    }
+    dialog.medium:is(.left, .right) {
+        width: 25rem;
+    }
+    dialog.large:is(.left, .right) {
+        width: 35rem;
+    }
+    dialog.small:is(.top, .bottom) {
+        height: 10rem;
+    }
+}
+
+@media (pointer: coarse) {
+    body:has(.dialog-state:checked, dialog[open], dialog.active) {
+        overflow: hidden;
+    }
+}

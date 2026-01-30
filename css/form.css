@@ -1,0 +1,514 @@
+fieldset {
+  margin-bottom: .4rem;
+}
+
+legend {
+  font-size: .9rem;
+  font-weight: 500;
+  margin-bottom: .8rem;
+}
+
+label {
+  display: block;
+  line-height: 1.2rem;
+  padding: .3rem 0;
+}
+
+label.small {
+  font-size: .7rem;
+  padding: .1rem 0;
+}
+
+label.large {
+  font-size: .9rem;
+  padding: .4rem 0;
+}
+
+input,
+textarea {
+  appearance: none;
+  background: var(--color-base-100);
+  background-image: none;
+  border: .05rem solid var(--color-base-300);
+  border-radius: var(--roundness);
+  color: var(--color-base-content);
+  display: block;
+  font-size: .8rem;
+  height: 1.8rem;
+  line-height: 1.2rem;
+  max-width: 100%;
+  outline: none;
+  padding: .25rem .4rem;
+  position: relative;
+  transition: background .2s, border .2s, box-shadow .2s, color .2s;
+  width: 100%;
+  margin-bottom: .4rem;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--color-primary); 
+  box-shadow: 0 0 0 .1rem rgba(87, 85, 217, .2);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-base-content);
+  opacity: .5;
+}
+
+input.small {
+  font-size: .7rem;
+  height: 1.4rem;
+  padding: .05rem .3rem;
+}
+
+input.large {
+  font-size: .9rem;
+  height: 2rem;
+  padding: .35rem .6rem;
+}
+
+/* TODO remove in favor of row? */
+input.inline {
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+}
+
+input[type="file"] {
+  height: auto;
+}
+
+textarea {
+  height: auto;
+  padding: .4rem;
+}
+
+.hint {
+  color: var(--color-base-content);
+  opacity: .65;
+  font-size: .7rem;
+  display: block;
+  margin-top: -0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.valid .hint,
+.valid + .hint {
+  color: var(--color-success);
+}
+
+.invalid .hint,
+.invalid + .hint {
+  color: var(--color-error);
+}
+
+select {
+  appearance: none;
+  background: var(--color-base-100);
+  border: .05rem solid var(--color-base-300);
+  border-radius: var(--roundness);
+  color: inherit;
+  font-size: .8rem;
+  height: 1.8rem;
+  line-height: 1.2rem;
+  outline: none;
+  padding: .25rem .4rem;
+  vertical-align: middle;
+  width: 100%;
+  margin-bottom: .4rem;
+}
+
+select:focus {
+  border-color: var(--color-primary); 
+  box-shadow: 0 0 0 .1rem rgba(87, 85, 217, .2);
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select.small {
+  font-size: .7rem;
+  height: 1.4rem;
+  padding: .05rem 1.1rem .05rem .3rem;
+}
+
+select.large {
+  font-size: .9rem;
+  height: 2rem;
+  padding: .35rem 1.4rem .35rem .6rem;
+}
+
+select[size],
+select[multiple] {
+  height: auto;
+  padding: .25rem .4rem;
+}
+
+select[size] option,
+select[multiple] option {
+  padding: .1rem .2rem;
+}
+
+select:not([multiple]):not([size]) {
+  background: var(--color-base-100) url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right .35rem center/.4rem .5rem;
+  padding-right: 1.2rem;
+}
+
+/* Removed .has-icon-left and .has-icon-right in favor of .field.prefix/suffix */
+
+
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: none;
+  background: var(--color-base-200);
+  border: .05rem solid var(--color-base-300);
+  border-radius: var(--roundness);
+  cursor: pointer;
+  display: inline-block;
+  height: .8rem;
+  line-height: .8rem;
+  margin: 0 .2rem 0 0;
+  outline: none;
+  padding: 0;
+  position: relative;
+  top: -.1rem;
+  vertical-align: middle;
+  width: .8rem;
+  transition: background .2s, border .2s, box-shadow .2s;
+}
+
+input[type="radio"] {
+  border-radius: 50%;
+}
+
+input[type="range"] {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  display: block;
+  width: 100%;
+  height: 1.2rem;
+  margin: .4rem 0;
+}
+
+input[type="range"]:focus {
+  border: 0;
+  box-shadow: none;
+  outline: none;
+}
+
+/* Track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--color-secondary);
+  border-radius: var(--roundness);
+  height: .1rem;
+  width: 100%;
+}
+
+input[type="range"]::-moz-range-track {
+  background: var(--color-secondary);
+  border-radius: var(--roundness);
+  height: .1rem;
+  width: 100%;
+}
+
+/* Thumb */
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  background: var(--color-primary);
+  border: 0;
+  border-radius: 50%;
+  height: .6rem;
+  margin-top: -.25rem; /* Center on track */
+  width: .6rem;
+  transition: box-shadow .2s;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background: var(--color-primary);
+  border: 0;
+  border-radius: 50%;
+  height: .6rem;
+  width: .6rem;
+  transition: box-shadow .2s;
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+  box-shadow: 0 0 0 .1rem rgba(87, 85, 217, .2);
+}
+
+input[type="range"]:active::-moz-range-thumb {
+  box-shadow: 0 0 0 .1rem rgba(87, 85, 217, .2);
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 .1rem rgba(87, 85, 217, .2);
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+input[type="checkbox"]:checked::before {
+  background-clip: pa1-box;
+  border: .1rem solid var(--color-base-100);
+  border-left-width: 0;
+  border-top-width: 0;
+  content: "";
+  display: block;
+  height: 9px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -65%) rotate(45deg);
+  width: 6px;
+}
+
+input[type="checkbox"]:indeterminate {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+input[type="checkbox"]:indeterminate::before {
+  background: var(--color-base-100);
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+}
+
+input[type="radio"]:checked::before {
+  background: var(--color-base-100);
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 6px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+}
+
+input[type="checkbox"]:disabled,
+input[type="radio"]:disabled {
+  background-color: #eef0f3;
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+input[type="checkbox"][role="switch"] {
+  border-radius: .45rem;
+  height: .9rem;
+  width: 1.6rem;
+}
+
+input[type="checkbox"][role="switch"]::before {
+  background: var(--color-base-300);
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: .8rem;
+  position: absolute;
+  width: .8rem;
+  transition: all .2s;
+  transform: none; /* Reset transform from standard checkbox */
+}
+
+input[type="checkbox"][role="switch"]:checked {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+input[type="checkbox"][role="switch"]:checked::before {
+  background: var(--color-base-100);
+  left: .75rem;
+  top: .025rem; /* Explicitly reset top for switch */
+  width: .8rem; /* Explicitly reset width */
+  height: .8rem; /* Explicitly reset height */
+}
+
+.field {
+  display: flex;
+  margin-bottom: .4rem;
+  position: relative;
+}
+
+/* Reset rounding for all non-icon elements in a field */
+.field > :not(i) {
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.field > :not(i):not(*:not(i) ~ *) {
+  border-top-left-radius: var(--roundness);
+  border-bottom-left-radius: var(--roundness);
+}
+
+.field > :not(i):not(:has(~ :not(i))) {
+  border-top-right-radius: var(--roundness);
+  border-bottom-right-radius: var(--roundness);
+}
+
+.field input,
+.field select,
+.field textarea {
+  margin-bottom: 0;
+  flex: 1 1 auto;
+  width: 1%;
+  z-index: 0;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus, 
+.field button:focus,
+.field .button:focus {
+  z-index: 2;
+}
+
+/* Inset Icon Handling */
+.field > i {
+  height: .8rem;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: .8rem;
+  z-index: 3;
+}
+
+/* Positioning for inset icons */
+.field.prefix > i:first-child { left: .45rem; }
+.field.suffix > i:last-child { right: .45rem; }
+
+/* Padding for elements with inset icons */
+.field.prefix > i:first-child + :not(i) { padding-left: 1.5rem; }
+.field.suffix > :not(i):has(+ i:last-child) { padding-right: 1.5rem; }
+
+/* Modifier: Prefix Background (for non-icon prefixes) */
+.field.prefix > :not(i):first-child {
+  background: var(--color-base-200);
+  border: .05rem solid var(--color-base-300);
+  border-right: none;
+  flex: 0 0 auto;
+  padding: .25rem .4rem;
+  width: auto;
+  white-space: nowrap;
+}
+
+/* Modifier: Suffix Background (for non-icon suffixes) */
+.field.suffix > :not(i):last-child {
+  background: var(--color-base-200);
+  border: .05rem solid var(--color-base-300);
+  border-left: none;
+  flex: 0 0 auto;
+  padding: .25rem .4rem;
+  width: auto;
+  white-space: nowrap;
+}
+
+
+
+
+
+.field.inline {
+  display: inline-flex;
+}
+
+.valid input,
+input.valid,
+.valid select,
+select.valid {
+  background: var(--bg-success-light);
+  border-color: var(--color-success);
+}
+
+.valid input:focus,
+input.valid:focus,
+.valid select:focus,
+select.valid:focus {
+  box-shadow: 0 0 0 .1rem rgba(50, 182, 67, .2);
+}
+
+input.invalid:not([type="checkbox"]):not([type="radio"]),
+select.invalid {
+  background: var(--bg-error-light);
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 .1rem rgba(232, 86, 0, .2);
+}
+
+input.invalid[type="checkbox"],
+input.invalid[type="radio"] {
+  border-color: var(--color-error);
+}
+
+input.invalid[type="checkbox"]:checked,
+input.invalid[type="radio"]:checked {
+  background: var(--color-error);
+  border-color: var(--color-error);
+}
+
+input.invalid[type="checkbox"]:focus,
+input.invalid[type="radio"]:focus {
+  border-color: #e85600;
+  box-shadow: 0 0 0 .1rem rgba(232, 86, 0, .2);
+}
+
+input.invalid[type="checkbox"]:indeterminate {
+  background: var(--color-error);
+  border-color: var(--color-error);
+}
+
+input:not(:placeholder-shown):invalid {
+  border-color: var(--color-error);
+}
+
+input:not(:placeholder-shown):invalid:focus {
+  background: var(--color-error-light, #fffaf7); 
+  box-shadow: 0 0 0 .1rem rgba(232, 86, 0, .2);
+}
+
+input:not(:placeholder-shown):invalid + .hint {
+  color: var(--color-error);
+}
+
+input:disabled,
+input.disabled,
+select:disabled,
+select.disabled {
+  background-color: var(--color-secondary);
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+input[readonly] {
+  background-color: var(--color-base-300);
+}
+
+
+
+.form.horizontal {
+  padding: .4rem 0;
+}
+
+.form.horizontal .group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form.inline {
+  display: inline-block;
+}

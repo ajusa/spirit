@@ -1,0 +1,67 @@
+.container {
+	max-width: 940px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 1rem;
+}
+
+.row {
+	display: table;
+	margin-left: -1rem;
+	margin-right: -1rem;
+	border-spacing: 1rem 0;
+}
+.row.no-space {
+	margin-left: 0rem;
+	margin-right: 0rem;
+	border-spacing: 0;
+}
+
+.middle {vertical-align: middle;}
+
+.row > * {display: table-cell;}
+.max {width: 100%;}
+
+@media (min-width: 600px) { 
+  .grid {
+  	display: table;
+  	width: calc(100% + 2rem);
+  	margin-left: -1rem;
+  	table-layout: fixed;
+  	border-spacing: 1rem 0;
+  }
+  .grid.no-space {
+  	width: 100%;
+  	margin-left: 0rem;
+  	border-spacing: 0;
+  }
+  .grid > * {display: table-cell;}
+
+  .grid > *:not(:first-child):not(:last-child) {
+  	margin-left: 1rem;
+  	margin-right: 1rem;
+	}
+  .row-padded .row { border-spacing: 1rem 0; } }
+@media (min-width: 600px) {
+	.col-1 { width: 8.333333%; }
+  .col-2 { width: 16.666667%; }
+  .col-3 { width: 25%; }
+  .col-4 { width: 33.333333%; }
+  .col-5 { width: 41.666667%; }
+  .col-6 { width: 50%; }
+  .col-7 { width: 58.333333%; }
+  .col-8 { width: 66.666667%; }
+  .col-9 { width: 75%; }
+  .col-10 { width: 83.333333%; }
+  .col-11 { width: 91.666667%; }
+}
+.row-align-middle .col { vertical-align: middle; }
+.row-reverse .col { direction: ltr; }
+a:hover {
+	text-decoration: underline;
+	text-underline-offset: 4px;
+}
+a {
+	text-decoration: none;
+	color: black;
+}

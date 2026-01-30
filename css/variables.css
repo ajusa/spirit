@@ -1,0 +1,50 @@
+:root, .light {
+  /* Primary Brand Color */
+  --color-primary: #5755d9;
+  --color-primary-dark: #302ecd;
+  --color-primary-light: #f1f1fc;
+  --color-primary-content: #fff;
+
+  /* Secondary Brand Color */
+  --color-secondary: #e5e5f9;
+  --color-secondary-content: #3b4351;
+
+  /* Base Surface Colors (progressively darker) */
+  --color-base-100: #fff;        /* body - lightest */
+  --color-base-200: #f7f8f9;     /* surface */
+  --color-base-300: #eef0f3;     /* overlay - darkest */
+  --color-base-content: #3b4351; /* main text */
+
+  /* State Colors */
+  --color-success: #32b643;
+  --color-success-dark: #2da23c;
+  --color-success-content: #fff;
+  --color-warning: #ffb700;
+  --color-warning-dark: #e6a500;
+  --color-warning-content: #3b4351;
+  --color-error: #e85600;
+  --color-error-dark: #cf4d00;
+  --color-error-content: #fff;
+
+  /* Utilities */
+  --roundness: .2rem;
+}
+
+/* Dark Mode Theme Overrides */
+.dark {
+  --color-primary: #7a78e0;
+  --color-primary-dark: #8e8ce6;
+  --color-primary-light: rgba(122, 120, 224, 0.2);
+  --color-primary-content: #fff;
+
+  --color-secondary: rgba(122, 120, 224, 0.2);
+  --color-secondary-content: #f0f1f3;
+
+  --color-base-100: #1e242e;     /* body - darkest */
+  --color-base-200: #2a303b;     /* surface */
+  --color-base-300: #303742;     /* overlay - lightest */
+  --color-base-content: #f0f1f3;
+
+  --color-success-content: #1e242e;
+  --color-warning-content: #1e242e;
+}

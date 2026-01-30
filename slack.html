@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Slack Clone</title>
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/elements.css">
+  <link rel="stylesheet" href="css/button.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/utils.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="grid no-space full-height ma0 overflow-hidden">
+
+    <!-- Sidebar -->
+    <aside class="s3 m2 l2 contrast pa0 full-height">
+        <!-- Sidebar Header -->
+        <header class="pa3 border-bottom-weak row middle-align">
+            <h4 class="ma0 mr2 ellipsis max">WorkSpace</h4>
+            <span class="uniform tiny circle bg-surface base-text pointer status">v</span>
+        </header>
+        
+        <!-- Sidebar Content -->
+        <div class="scroll pa3">
+            <div class="mb4">
+                <div class="row middle-align mb1 muted-text small-text">
+                    <span class="max uppercase bold small-text">Channels</span>
+                    <span class="pointer">+</span>
+                </div>
+                <nav>
+                    <a href="#" class="row middle-align pv1 invert-text active" style="opacity: 1;">
+                        <span class="muted-text mr2">#</span> general
+                    </a>
+                    <a href="#" class="row middle-align pv1 invert-text" style="opacity: 0.8;">
+                        <span class="muted-text mr2">#</span> design
+                    </a>
+                    <a href="#" class="row middle-align pv1 invert-text" style="opacity: 0.8;">
+                        <span class="muted-text mr2">#</span> engineering
+                    </a>
+                    <a href="#" class="row middle-align pv1 invert-text" style="opacity: 0.8;">
+                        <span class="muted-text mr2">#</span> random
+                    </a>
+                    <a href="#" class="row middle-align pv1 invert-text" style="opacity: 0.8;">
+                        <span class="muted-text mr2">#</span> announcements
+                    </a>
+                </nav>
+            </div>
+            
+            <div>
+                <div class="row middle-align mb1 muted-text small-text">
+                    <span class="max uppercase bold small-text">Direct Messages</span>
+                    <span class="pointer">+</span>
+                </div>
+                <nav>
+                    <a href="#" class="row middle-align pv1 invert-text" style="opacity: 0.8;">
+                        <span class="uniform tiny circle success mr2"></span> Sarah Engineer
+                    </a>
+                    <a href="#" class="row middle-align pv1 invert-text" style="opacity: 0.8;">
+                        <span class="uniform tiny circle neutral mr2"></span> Dave Designer
+                    </a>
+                    <a href="#" class="row middle-align pv1 invert-text" style="opacity: 0.8;">
+                        <span class="uniform tiny circle error mr2"></span> Slackbot
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="s9 m10 l10 pa0 bg-surface full-height">
+        
+        <!-- Main Header -->
+        <header class="row middle-align pa3 border-bottom">
+            <div class="max">
+                <div class="row middle-align">
+                    <h4 class="ma0 mr2">#general</h4>
+                    <span class="uniform tiny circle pointer muted-text border">★</span>
+                </div>
+                <small class="muted-text">Company-wide announcements and work-based matters</small>
+            </div>
+            
+            <div class="row middle-align">
+               <div class="row small-space mr3">
+                   <span class="uniform tiny circle primary" style="margin-right: -10px; border: 2px solid white;">JD</span>
+                   <span class="uniform tiny circle success" style="margin-right: -10px; border: 2px solid white;">SE</span>
+                   <span class="uniform tiny circle warning" style="border: 2px solid white;">3+</span>
+               </div>
+               
+               <div class="field suffix ma0">
+                   <input type="text" class="small rounded ma0" placeholder="Search...">
+                   <i class="icon">🔍</i>
+               </div>
+            </div>
+        </header>
+        
+        <!-- Messages Area -->
+        <div class="max scroll pa3">
+            
+            <!-- Date Divider -->
+            <div class="row center-align my3 relative">
+                <div class="absolute full-width" style="border-top: 1px solid var(--border-color-weak); z-index: 0;"></div>
+                <span class="bg-surface px3 small-text muted-text bold relative" style="z-index: 1;">Today</span>
+            </div>
+
+            <!-- Message 1 -->
+            <div class="row top-align mb3 pa2 bg-hover rounded">
+                <span class="uniform circle primary mr2">JD</span>
+                <div class="max">
+                    <div class="row middle-align mb1">
+                        <strong class="mr2">John Doe</strong>
+                        <small class="muted-text">9:41 AM</small>
+                    </div>
+                    <div class="">
+                        Morning everyone! <span class="bg-primary-light primary-text rounded px1">@channel</span> Just a reminder that the all-hands is at 3 PM today.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Message 2 -->
+            <div class="row top-align mb3 pa2">
+                <span class="uniform circle success mr2">SE</span>
+                <div class="max">
+                    <div class="row middle-align mb1">
+                        <strong class="mr2">Sarah Engineer</strong>
+                        <small class="muted-text">9:45 AM</small>
+                    </div>
+                    <div class=" mb2">
+                        Thanks John! I'll be there. Also pushed the latest fix for the header bug.
+                    </div>
+                    
+                    <div class="card pa0 row middle-align w3">
+                         <div class="uniform secondary ma2">IMG</div>
+                         <div class="max pa2 pl0">
+                             <div class="bold small-text">screenshot_v2.png</div>
+                             <div class=" muted-text">2MB</div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Message 3 -->
+            <div class="row top-align mb3 pa2">
+                <span class="uniform circle warning mr2">DD</span>
+                <div class="max">
+                    <div class="row middle-align mb1">
+                        <strong class="mr2">Dave Designer</strong>
+                        <small class="muted-text">10:02 AM</small>
+                    </div>
+                    <div class=" mb1">
+                        Can someone review the PR? <a href="#">#1024</a>
+                    </div>
+                    <div class="row small-space">
+                        <span class="bg-surface-alt border px1 rounded small-text pointer">👀 1</span>
+                        <span class="bg-surface-alt border px1 rounded small-text pointer">✅ 2</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Message 4 -->
+            <div class="row top-align mb3 pa2">
+                <span class="uniform circle error mr2">SB</span>
+                <div class="max">
+                     <div class="row middle-align mb1">
+                        <strong class="mr2">Slackbot</strong>
+                        <span class=" muted-text">API</span>
+                        <small class="muted-text ml2">10:05 AM</small>
+                    </div>
+                    <div class="">
+                         <span class="error-text bold">Error:</span> Deployment to production failed. Check the logs.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- Input Area -->
+        <div class="pa3">
+            <div class="card pa0">
+                 <div class="pa1 bg-surface-alt border-bottom row small-space">
+                    <button class="clear small bold">B</button>
+                    <button class="clear small italic">I</button>
+                    <button class="clear small"><strike>S</strike></button>
+                    <div class="divider vertical"></div>
+                    <button class="clear small code">&lt;/&gt;</button>
+                    <button class="clear small">Link</button>
+                </div>
+                <textarea rows="2" class="ma0 border-none resize-none full-width" placeholder="Message #general"></textarea>
+                <div class="row middle-align ph2 pv1">
+                    <button class="uniform tiny circle secondary heading bold mr1 pointer">+</button>
+                    <button class="uniform tiny circle hover mr1 pointer">@</button>
+                    <button class="uniform tiny circle hover pointer">😃</button>
+                    <div class="max"></div>
+                    <button class="primary small">Send</button>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+</body>
+</html>

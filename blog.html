@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My ramblings</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/elements.css">
+  <link rel="stylesheet" href="css/button.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/utils.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="small container pt5 pb5">
+
+  <!-- Blog Index Page -->
+  <section id="blog-index">
+    <!-- Header -->
+    <header class="mb4">
+      <h1 class="f2 mb1">My ramblings</h1>
+      <p class="muted-text mb0">adventures with technology</p>
+    </header>
+
+    <!-- Navigation Row -->
+    <div class="row mb4">
+      <nav class="row small-space">
+        <a href="#blog-index" class="bold">posts</a>
+        <a href="#" class="muted-text">about</a>
+      </nav>
+      <div class="max"></div>
+      <nav class="row middle-align small-space muted-text">
+        <a href="#" class="muted-text">⊞</a>
+        <a href="#" class="muted-text">✉</a>
+        <a href="#" class="muted-text">✲</a>
+      </nav>
+    </div>
+
+    <!-- Post List -->
+    <div class="mb4">
+      <div class="row mb2">
+        <a href="#blog-post" class="max">How I'm writing web apps with Nim in 2026</a>
+        <span class="muted-text small-text">Jan 4, 2026</span>
+      </div>
+      <div class="row mb2">
+        <a href="#" class="max">My productivity system</a>
+        <span class="muted-text small-text">Jan 1, 2026</span>
+      </div>
+      <div class="row mb2">
+        <a href="#" class="max">Android gaming on a budget</a>
+        <span class="muted-text small-text">Jan 2, 2022</span>
+      </div>
+      <div class="row mb2">
+        <a href="#" class="max">Building a simple typing test website using hyperscript</a>
+        <span class="muted-text small-text">Dec 18, 2021</span>
+      </div>
+      <div class="row mb2">
+        <a href="#" class="max">Building a simple room-based chat application in Nim (using HTMX)</a>
+        <span class="muted-text small-text">Nov 22, 2021</span>
+      </div>
+    </div>
+
+    <!-- More Link -->
+    <div class="right-align">
+      <a href="#">more »</a>
+    </div>
+  </section>
+
+  <!-- Blog Post Detail Page -->
+  <section id="blog-post" class="mt5 pt5">
+    <a href="#blog-index" class="muted-text small-text mb3">← Back</a>
+
+    <div class="grid mt4">
+      <!-- Main Content -->
+      <article class="s12 l8">
+        <h2 class="f2 bold mb1">How I'm writing web apps with Nim in 2026</h2>
+        <p class="muted-text small-text mb4">Jan 4, 2026</p>
+
+        <p>A few things have changed in the Nim webdev community <a href="#">since I last wrote in 2021</a>. The main update is that Jester is effectively in maintenance mode, and has some issues with the latest version of Nim. All of the other libraries/frameworks are still being actively developed (or are stable on the latest versions of Nim), which is a healthy sign.</p>
+
+        <p>If you're someone who would much rather browse through code, I have a small sample app using this stack that <a href="#">can be found here</a>.</p>
+
+        <h3 class="f3 mt4 mb3">Web server</h3>
+
+        <p>Since Jester is gone, I've switched to <a href="#">mummy</a>. It uses threads (instead of async/await), which leads to simpler code and even easier debugging due to stack traces. The author of mummy <a href="#">wrote a post on the Nim forum</a> that I recommend reading through on how he's using it in production. It's remarkably fast and stable - I've been running it on my web server uninterrupted for several months, and there have been absolutely no memory leaks or crashes in that time. I also used it to build <a href="#">sakura.arhamjain.com</a>, which saw traffic spikes during Sakura-Con (in Seattle), and never had any issues with scaling.</p>
+
+        <pre><code>import mummy, mummy/routers
+
+proc indexHandler(request: Request) =
+  var headers: HttpHeaders
+  headers["Content-Type"] = "text/plain"
+  request.respond(200, headers, "Hello, World\!")
+
+var router: Router
+router.get("/", indexHandler)</code></pre>
+
+        <p class="mt4">More content would continue here...</p>
+      </article>
+
+      <!-- Sidebar Navigation -->
+      <aside class="s12 l4 pl4">
+        <nav>
+          <p class="muted-text mb2"><a href="#" class="muted-text">Web server</a></p>
+          <p class="muted-text mb2"><a href="#" class="muted-text">ORM</a></p>
+          <p class="muted-text mb2"><a href="#" class="muted-text">UI</a></p>
+          <p class="muted-text mb2 ml3"><a href="#" class="muted-text">Templating</a></p>
+          <p class="muted-text mb2"><a href="#" class="muted-text">Conclusion</a></p>
+        </nav>
+      </aside>
+    </div>
+  </section>
+
+</body>
+</html>
