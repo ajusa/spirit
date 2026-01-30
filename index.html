@@ -808,85 +808,19 @@
         <!-- Standard Dialog -->
         <div>
           <label for="modal-standard" class="button primary">Open Standard Dialog</label>
-          <input type="checkbox" id="modal-standard" class="dialog-state">
-          <label for="modal-standard" class="dialog-backdrop"></label>
-          <dialog>
-            <h3 class="mt0">Dialog Title</h3>
-            <p>No JS, no Popover API required. Works via the checkbox hack with adjacent selectors for reliability.</p>
-            <div class="row mt3">
-              <label for="modal-standard" class="button link">Cancel</label>
-              <label for="modal-standard" class="button primary">Confirm</label>
-            </div>
-          </dialog>
+
         </div>
 
         <!-- Sidebar (Left) -->
         <div>
           <label for="modal-left" class="button">Left Sidebar</label>
-          <input type="checkbox" id="modal-left" class="dialog-state">
-          <label for="modal-left" class="dialog-backdrop"></label>
-          <dialog class="left medium">
-            <div class="row no-wrap mb3">
-              <h3 class="max ma0">Menu</h3>
-              <label for="modal-left" class="button link small">&times;</label>
-            </div>
-            <menu>
-              <li><a href="#">Dashboard</a></li>
-              <li><a href="#">Settings</a></li>
-              <li><a href="#">Messages</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Logout</a></li>
-            </menu>
-          </dialog>
+
         </div>
 
         <!-- Bottom Sheet -->
         <div>
           <label for="modal-bottom" class="button">Bottom Sheet</label>
-          <input type="checkbox" id="modal-bottom" class="dialog-state">
-          <label for="modal-bottom" class="dialog-backdrop"></label>
-          <dialog class="bottom">
-            <div class="container pb1 pt0">
-              <!-- Drag Handle -->
-              <div class="center-align mt0 mb2">
-                <div class="overlay round" style="width: 32px; height: 4px; display: inline-block; opacity: 0.3;"></div>
-              </div>
-              
-              <h4 class="center-align mb3 mt0">Quick Actions</h4>
-              
-              <div>
-                <label for="modal-bottom" class="row pa2 middle-align pointer round mb1">
-                  <span class="uniform circle primary mr3">S</span>
-                  <span class="max bold">Share with friends</span>
-                </label>
-              </div>
 
-              <div>
-                <label for="modal-bottom" class="row pa2 middle-align pointer round mb1">
-                  <span class="uniform circle success mr3">D</span>
-                  <span class="max bold">Download locally</span>
-                </label>
-              </div>
-
-              <div>
-                <label for="modal-bottom" class="row pa2 middle-align pointer round mb1">
-                  <span class="uniform circle warning mr3">P</span>
-                  <span class="max bold">Pin to dashboard</span>
-                </label>
-              </div>
-
-              <div>
-                <label for="modal-bottom" class="row pa2 middle-align pointer round mb1 error-text">
-                  <span class="uniform circle error mr3">E</span>
-                  <span class="max bold">Delete permanently</span>
-                </label>
-              </div>
-
-              <div class="mt3 center-align">
-                <label for="modal-bottom" class="button link max large">Dismiss</label>
-              </div>
-            </div>
-          </dialog>
         </div>
       </div>
 
@@ -1513,6 +1447,82 @@
       </div>
     </section>
   </main>
+  <!-- Modals (Moved to root to avoid transform stacking context issues) -->
+  
+  <!-- Standard Dialog -->
+  <input type="checkbox" id="modal-standard" class="dialog-state">
+  <label for="modal-standard" class="dialog-backdrop"></label>
+  <dialog>
+    <h3 class="mt0">Dialog Title</h3>
+    <p>No JS, no Popover API required. Works via the checkbox hack with adjacent selectors for reliability.</p>
+    <div class="row mt3">
+      <label for="modal-standard" class="button link">Cancel</label>
+      <label for="modal-standard" class="button primary">Confirm</label>
+    </div>
+  </dialog>
+
+  <!-- Left Sidebar -->
+  <input type="checkbox" id="modal-left" class="dialog-state">
+  <label for="modal-left" class="dialog-backdrop"></label>
+  <dialog class="left medium">
+    <div class="row no-wrap mb3">
+      <h3 class="max ma0">Menu</h3>
+      <label for="modal-left" class="button link small">&times;</label>
+    </div>
+    <menu>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Messages</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Logout</a></li>
+    </menu>
+  </dialog>
+
+  <!-- Bottom Sheet -->
+  <input type="checkbox" id="modal-bottom" class="dialog-state">
+  <label for="modal-bottom" class="dialog-backdrop"></label>
+  <dialog class="bottom">
+    <div class="container pb1 pt0">
+      <!-- Drag Handle -->
+      <div class="center-align mt0 mb2">
+        <div class="overlay round" style="width: 32px; height: 4px; display: inline-block; opacity: 0.3;"></div>
+      </div>
+      
+      <h4 class="center-align mb3 mt0">Quick Actions</h4>
+      
+      <div>
+        <label for="modal-bottom" class="row pa2 middle-align pointer round mb1">
+          <span class="uniform circle primary mr3">S</span>
+          <span class="max bold">Share with friends</span>
+        </label>
+      </div>
+
+      <div>
+        <label for="modal-bottom" class="row pa2 middle-align pointer round mb1">
+          <span class="uniform circle success mr3">D</span>
+          <span class="max bold">Download locally</span>
+        </label>
+      </div>
+
+      <div>
+        <label for="modal-bottom" class="row pa2 middle-align pointer round mb1">
+          <span class="uniform circle warning mr3">P</span>
+          <span class="max bold">Pin to dashboard</span>
+        </label>
+      </div>
+
+      <div>
+        <label for="modal-bottom" class="row pa2 middle-align pointer round mb1 error-text">
+          <span class="uniform circle error mr3">E</span>
+          <span class="max bold">Delete permanently</span>
+        </label>
+      </div>
+
+      <div class="mt3 center-align">
+        <label for="modal-bottom" class="button link max large">Dismiss</label>
+      </div>
+    </div>
+  </dialog>
 </body>
 
 </html>
