@@ -46,4 +46,6 @@ Check out the example pages in the repository:
 - `index.html` - Component gallery
 - `startup.html` - Landing page example
 - `blog.html` - Blog layout example
-- `slack.html` - App interface example
+
+## Credit
+spirit.css is heavily based on Spectre CSS, and the class names are based on Beer CSS.
