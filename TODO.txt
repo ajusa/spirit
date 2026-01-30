@@ -1,7 +1,4 @@
 TODO
-Migrate a project to use it
-Add source control
-Minify and gz to see the size
 Make CSS simpler where possible (especially forms)
 Set up PostCSS build pipeline
 
@@ -34,3 +31,6 @@ Fix toggle switch placement
 Fix loading icon placement in input
 Make the configurable knobs easier and simpler
 Get a high level critique of the framework and see if it is consistent
+Migrate a project to use it
+Add source control
+Minify and gz to see the size
